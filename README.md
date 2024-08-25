@@ -29,7 +29,7 @@ $ yarn
 $ yarn dev
 ```
 
-then open up `https://localhost:3000` in the browser of your choice.
+then open up `http://localhost:3000/` in the browser of your choice.
 
 ---
 
