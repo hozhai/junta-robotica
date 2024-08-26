@@ -35,7 +35,7 @@ then open up `http://localhost:3000/` in the browser of your choice.
 
 ---
 
-Feel free to open up pull requests if you happen to find and fix unintended behavior, this includes bugs, glitches, unexpected behavior, typos, etc.
+Feel free to open up issues or pull requests if you happen to find and fix unintended behavior, this includes bugs, glitches, unexpected behavior, typos, etc.
 
 ---
 
