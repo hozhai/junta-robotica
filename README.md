@@ -4,6 +4,8 @@
 
 # Primer Festival de Robotica
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Zhai90/festival-robotica/issues)
+
 ## About
 
 Santiago's first ever robotics festival @ Lo Barnechea will be here in April of 2025! This will be a series of meetings where like-minded individuals and groups can share, learn, and have fun in a safe and supportive environment!
