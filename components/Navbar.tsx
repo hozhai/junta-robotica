@@ -18,7 +18,7 @@ import {
 
 export default function Navbar() {
     return (
-        <nav className="flex justify-center items-center fixed min-w-full max-w-full px-14 text-xl">
+        <nav className="flex justify-center items-center fixed min-w-full max-w-full px-6 text-xl">
             <div className="ml-auto hidden md:block">
                 <ul className="flex justify-center items-center list-none">
                     <li>Home</li>
@@ -32,6 +32,7 @@ export default function Navbar() {
                     alt="Logo Placeholder Image"
                 />
             </div>
+            <div className="block md:hidden ml-5">Click</div>
             <div className="hidden md:block">
                 <ul className="flex justify-center items-center list-none">
                     <li>Home</li>
@@ -43,8 +44,12 @@ export default function Navbar() {
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <DropdownMenuTrigger>
-                                    <Avatar>
-                                        <AvatarImage src="https://github.com/shadcn.png" />
+                                    <Avatar className="w-12 h-12">
+                                        <AvatarImage
+                                            src="https://github.com/shadcn.png"
+                                            width={80}
+                                            height={80}
+                                        />
                                         <AvatarFallback>CN</AvatarFallback>
                                     </Avatar>
                                 </DropdownMenuTrigger>
@@ -52,7 +57,7 @@ export default function Navbar() {
                             <TooltipContent>John Doe</TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
-                    <DropdownMenuContent className="mr-10">
+                    <DropdownMenuContent className="mr-5">
                         {/* fixme: remove placeholder john doe */}
                         <DropdownMenuLabel>John Doe</DropdownMenuLabel>
                         <DropdownMenuSeparator />
