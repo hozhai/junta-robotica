@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const inter = Inter({
