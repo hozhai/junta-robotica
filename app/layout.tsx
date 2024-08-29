@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -30,8 +32,15 @@ export default function RootLayout({
             className={`${inter.variable} ${GeistSans.variable}`}
         >
             <body>
-                <Navbar />
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Navbar />
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

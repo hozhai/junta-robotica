@@ -14,13 +14,14 @@ This website is developed as part of the FesRob project by one of the members of
 
 Check out the team behind the project here. (team website todo)
 
-This website was built using [NextJS](https://nextjs.org) and [Figma](https://figma.com), along with [shadcn\ui](https://ui.shadcn.com).
+This website was built using [NextJS](https://nextjs.org) and [Figma](https://figma.com), along with [shadcn\ui](https://ui.shadcn.com), [framer-motion](https://www.framer.com/motion/) and [Aceternity UI](https://ui.aceternity.com/).
 
 ## TODO
 [] Components
-    [] Navigation bar
+- [] Navigation bar
+
 [] Home page
-    [] Landing/Hero
+- [] Landing/Hero
 
 ### Running your own fork:
 
