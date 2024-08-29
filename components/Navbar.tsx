@@ -20,7 +20,7 @@ import {
 } from "./ui/tooltip";
 
 // icons
-import { Menu, Settings2, Shield, SquareUser, User } from "lucide-react";
+import { LogOut, Menu, Settings2, Shield, SquareUser } from "lucide-react";
 import ThemeToggler from "./ThemeToggler";
 
 function AvatarIcon() {
@@ -50,22 +50,20 @@ function AvatarIcon() {
             <DropdownMenuContent>
                 {/* fixme: remove placeholder john doe */}
                 {/* fixme: icons are on new line instead of inline w/ text */}
-                <DropdownMenuLabel>
-                    <User /> John Doe
-                </DropdownMenuLabel>
+                <DropdownMenuLabel>John Doe</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                    <SquareUser /> My Account
+                <DropdownMenuItem className="cursor-pointer">
+                    <SquareUser className="w-4" /> &nbsp; My Account
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                    <Settings2 /> Preferences
+                <DropdownMenuItem className="cursor-pointer">
+                    <Settings2 className="w-4" /> &nbsp; Preferences
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                    <Shield /> My Team
+                <DropdownMenuItem className="cursor-pointer">
+                    <Shield className="w-4" /> &nbsp; My Team
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-red-500">
-                    Sign Out
+                <DropdownMenuItem className="text-red-500 cursor-pointer">
+                    <LogOut className="w-4" /> &nbsp; Sign Out
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
@@ -74,8 +72,8 @@ function AvatarIcon() {
 
 export default function Navbar() {
     return (
-        <nav className="z-40 flex justify-center items-center fixed min-w-full text-xl bg-gray">
-            <div className="flex justify-center items-center bg-neutral-950">
+        <nav className="z-40 flex justify-center items-center fixed min-w-full text-xl">
+            <div className="flex justify-center items-center ">
                 <div className="md:mx-14">
                     <Image
                         src="https://dummyimage.com/500x500/000/fff&text=+LOGO+"
@@ -96,7 +94,7 @@ export default function Navbar() {
             <div className="ml-auto mr-10">
                 <ThemeToggler />
             </div>
-            <div className="self-center mr-10">
+            <div className="self-center mr-16">
                 <AvatarIcon />
             </div>
         </nav>

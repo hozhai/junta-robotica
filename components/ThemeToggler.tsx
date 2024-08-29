@@ -27,10 +27,16 @@ export default function ThemeToggler() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
+                <DropdownMenuItem
+                    onClick={() => setTheme("light")}
+                    className="cursor-pointer"
+                >
                     <Sun className="w-4" /> &nbsp;Light
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                <DropdownMenuItem
+                    onClick={() => setTheme("dark")}
+                    className="cursor-pointer"
+                >
                     <Moon className="w-4" /> &nbsp;Dark
                 </DropdownMenuItem>
                 {/* <DropdownMenuItem onClick={() => setTheme("system")}>
