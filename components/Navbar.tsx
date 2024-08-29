@@ -20,7 +20,7 @@ import {
 } from "./ui/tooltip";
 
 // icons
-import { Menu } from "lucide-react";
+import { Menu, Settings2, Shield, SquareUser, User } from "lucide-react";
 import ThemeToggler from "./ThemeToggler";
 
 function AvatarIcon() {
@@ -35,24 +35,34 @@ function AvatarIcon() {
                         <DropdownMenuTrigger>
                             <Avatar>
                                 <AvatarImage
-                                    src="https://github.com/shadcn.png"
+                                    src="https://avatars.githubusercontent.com/u/57015971?v=4"
                                     width={80}
                                     height={80}
                                 />
-                                <AvatarFallback>CN</AvatarFallback>
+                                <AvatarFallback>HZ</AvatarFallback>
                             </Avatar>
                         </DropdownMenuTrigger>
                     </TooltipTrigger>
+                    {/* fixme: remove placeholder big johnny doedoe */}
                     <TooltipContent>John Doe</TooltipContent>
                 </Tooltip>
             </TooltipProvider>
             <DropdownMenuContent>
                 {/* fixme: remove placeholder john doe */}
-                <DropdownMenuLabel>John Doe</DropdownMenuLabel>
+                {/* fixme: icons are on new line instead of inline w/ text */}
+                <DropdownMenuLabel>
+                    <User /> John Doe
+                </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>My Account</DropdownMenuItem>
-                <DropdownMenuItem>Preferences </DropdownMenuItem>
-                <DropdownMenuItem>My Team</DropdownMenuItem>
+                <DropdownMenuItem>
+                    <SquareUser /> My Account
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                    <Settings2 /> Preferences
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                    <Shield /> My Team
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="text-red-500">
                     Sign Out

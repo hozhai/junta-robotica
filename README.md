@@ -19,9 +19,23 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 ## TODO
 [] Components
 - [] Navigation bar
+  - [] Fix icon sizing
+  - [] Make dropdowns more intuitive
+  - [] Actually make the navbar work
+  - [] Responsiveness (probably using some fancy component from shadcn)
 
 [] Home page
 - [] Landing/Hero
+  - [] Button to learn more
+  - [] Signal for the user to scroll down
+- [] About (festival)
+- [] About (team)
+- [] How to participate
+
+[] Accounts
+- [] Allow users (teachers/schools) to sign in and register their team
+- [] Setup probably MongoDB maybe I cba to do some fancy sql db
+- [] Some GUI to visualize the data for the team behind the event
 
 ### Running your own fork:
 
