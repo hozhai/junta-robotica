@@ -31,7 +31,7 @@ export default function RootLayout({
             suppressHydrationWarning
             className={`${inter.variable} ${GeistSans.variable}`}
         >
-            <body className="overflow-hidden h-screen">
+            <body className="overflow-hidden h-screen motion-safe:scroll-smooth">
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"

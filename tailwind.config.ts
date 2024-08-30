@@ -28,6 +28,14 @@ const config = {
             },
         },
         extend: {
+            translate: {
+                "3d-z": "var(--translate-z)",
+                "3d-x": "var(--translate-x)",
+            },
+            rotate: {
+                "3d-x": "var(--rotate-x)",
+                "3d-y": "var(--rotate-y)",
+            },
             fontFamily: {
                 "geist-sans": ["var(--font-geist-sans)"],
                 "inter": ["var(--font-inter)"],

@@ -47,7 +47,7 @@ function AvatarIcon() {
                     <TooltipContent>John Doe</TooltipContent>
                 </Tooltip>
             </TooltipProvider>
-            <DropdownMenuContent>
+            <DropdownMenuContent align="end">
                 {/* fixme: remove placeholder john doe */}
                 {/* fixme: icons are on new line instead of inline w/ text */}
                 <DropdownMenuLabel>John Doe</DropdownMenuLabel>
