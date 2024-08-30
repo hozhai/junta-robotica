@@ -3,9 +3,9 @@ import DateTime from "@/components/pages/DateSection";
 
 export default function Home() {
     return (
-        <div className="snap-y">
-            <Hero className="snap-center snap-mandatory" />
-            <DateTime className="snap-start" />
+        <div className="snap-mandatory snap-y overflow-y-scroll h-screen">
+            <Hero className="snap-center relative" />
+            <DateTime className="snap-start relative" />
         </div>
     );
 }
