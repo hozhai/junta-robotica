@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -29,9 +30,14 @@ export default function RootLayout({
         <html
             lang="en-us"
             suppressHydrationWarning
-            className={`${inter.variable} ${GeistSans.variable}`}
+            className={cn(
+                "snap-y snap-proximity overflow-x-hidden min-h-screen max-h-screen min-w-full max-w-full",
+                GeistSans.variable,
+                inter.variable
+            )}
+            style={{ msScrollSnapPointsY: "100vh" }}
         >
-            <body className="overflow-hidden h-screen motion-safe:scroll-smooth">
+            <body>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
