@@ -13,11 +13,31 @@ export default function TimelineSection({ className }: classNameProp) {
             title: "2024 again",
             content: <p>hello again :D</p>,
         },
+        {
+            title: "2024 again",
+            content: <p>hello again :D</p>,
+        },
+        {
+            title: "2024 again",
+            content: <p>hello again :D</p>,
+        },
+        {
+            title: "2024 again",
+            content: <p>hello again :D</p>,
+        },
+        {
+            title: "2024 again",
+            content: <p>hello again :D</p>,
+        },
+        {
+            title: "2024 again",
+            content: <p>hello again :D</p>,
+        },
     ];
     return (
         <section
             className={cn(
-                "h-[100vh] grid justify-center items-start min-w-full font-sans",
+                "grid justify-center items-start min-w-full font-sans",
                 className
             )}
             id="timeline-section"

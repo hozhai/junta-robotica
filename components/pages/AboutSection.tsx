@@ -55,7 +55,7 @@ export default function AboutSection({ className }: classNameProp) {
             className={cn("h-[100vh] pt-36 relative", className)}
             id="about-section"
         >
-            <h2 className="text-center text-6xl font-semibold">
+            <h2 className="text-center text-6xl font-semibold relative z-20">
                 ¿De qué se trata?
             </h2>
             <BentoGrid className="max-w-screen-lg mx-auto mt-20 z-20 relative">

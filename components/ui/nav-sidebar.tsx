@@ -47,8 +47,8 @@ export function NavSidebar() {
     return (
         <div
             className={cn(
-                "rounded-md flex flex-col md:flex-row flex-1 max-w-7xl mx-auto overflow-hidden transition-all",
-                "h-screen fixed left-0 top-0 z-40" // for your use case, use `h-screen` instead of `h-[60vh]`
+                "flex flex-col md:flex-row max-w-7xl mx-auto overflow-hidden absolute right-0",
+                "h-screen fixed z-40" // for your use case, use `h-screen` instead of `h-[60vh]`
             )}
         >
             <Sidebar
@@ -98,7 +98,13 @@ export const Logo = () => {
             href="#"
             className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
         >
-            <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+            <Image
+                src="https://dummyimage.com/500x500/000/fff&text=+LOGO+"
+                width={30}
+                height={30}
+                alt="Logo Placeholder Image"
+            />
+
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -115,7 +121,12 @@ export const LogoIcon = () => {
             href="#"
             className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
         >
-            <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+            <Image
+                src="https://dummyimage.com/500x500/000/fff&text=+LOGO+"
+                width={80}
+                height={80}
+                alt="Logo Placeholder Image"
+            />
         </Link>
     );
 };
