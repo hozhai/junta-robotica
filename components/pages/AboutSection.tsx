@@ -4,6 +4,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 import type { classNameProp } from "@/lib/index";
 import { Pen, Smile, Target, Trophy } from "lucide-react";
+import SidePanels from "../ui/side-panels";
 
 export default function AboutSection({ className }: classNameProp) {
     const items = [
@@ -57,7 +58,7 @@ export default function AboutSection({ className }: classNameProp) {
             <h2 className="text-center text-6xl font-semibold">
                 ¿De qué se trata?
             </h2>
-            <BentoGrid className="max-w-screen-lg mx-auto mt-20">
+            <BentoGrid className="max-w-screen-lg mx-auto mt-20 z-20 relative">
                 {items.map((item, i) => (
                     <BentoGridItem
                         key={i}
@@ -70,12 +71,7 @@ export default function AboutSection({ className }: classNameProp) {
                 ))}
             </BentoGrid>
             {/* god forgive me for what im about to fucking do */}
-            <div className="opacity-0 lg:opacity-100 perspective-250 transform-style-3d absolute top-1/2 -translate-y-1/2 left-[1.1rem] h-[42.1rem] w-[20rem]">
-                <div className="shadow-[inset_-20px_0px_20px_40px_hsl(var(--background))] bg-grid-white/[0.2] w-full h-full translate-z-2 rotate-y-[25deg] scale3d-[1_1_2]"></div>
-            </div>
-            <div className="rotate-z-180 opacity-0 lg:opacity-100 perspective-250 transform-style-3d absolute top-1/2 -translate-y-1/2 right-[1.1rem] h-[42.1rem] w-[20rem]">
-                <div className="bg-grid-white/[0.2] w-full h-full translate-z-2 rotate-y-[25deg] scale3d-[1_1_2]"></div>
-            </div>
+            <SidePanels />
         </section>
     );
 }

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 
-import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { NavSidebar } from "@/components/ui/nav-sidebar";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Primer Festival de Robòtica",
+    title: "Primera Junta de Robòtica",
     description:
         "Pàgina oficial del primer festival de robòtica en Lo Barnechea, Chile. Bienvenidos!",
 };
@@ -44,7 +44,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <Navbar />
+                    <NavSidebar />
                     {children}
                 </ThemeProvider>
             </body>

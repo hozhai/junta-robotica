@@ -18,15 +18,15 @@ export const BentoGrid = ({
             )}
             initial={{
                 opacity: 0,
-                skew: 10,
+                y: 90,
             }}
-            whileInView={{
+            animate={{
                 opacity: 1,
-                skew: 0,
+                y: 0,
             }}
             transition={{
-                delay: 0.6,
-                duration: 0.7,
+                delay: 0.9,
+                duration: 0.6,
                 ease: "easeInOut",
             }}
         >

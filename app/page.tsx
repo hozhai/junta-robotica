@@ -7,7 +7,7 @@ export default function Home() {
         <>
             <HeroSection className="snap-center relative" />
 
-            <AboutSection className="snap-start relative" />
+            <AboutSection className="snap-center relative" />
             <TimelineSection className="snap-start relative" />
         </>
     );

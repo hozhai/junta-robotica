@@ -1,3 +1,3 @@
 export type classNameProp = {
-    className: string;
+    className?: string;
 };

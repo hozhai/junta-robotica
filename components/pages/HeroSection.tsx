@@ -4,13 +4,13 @@ import Link from "next/link";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora";
 import { motion } from "framer-motion";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import type { classNameProp } from "@/lib";
 import { CircleChevronRight, Info, UserRoundPlus } from "lucide-react";
 
 export default function HeroSection({ className }: classNameProp) {
     return (
-        <motion.div
+        <motion.section
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0, duration: 0.5 }}
@@ -36,7 +36,7 @@ export default function HeroSection({ className }: classNameProp) {
                             </h1>
 
                             {/* invisible duplicate for accessibility features */}
-                            <h1 className="absolute font-geist-sans font-semibold text-7xl top-20 opacity-15 cursor-text">
+                            <h1 className="absolute font-geist-sans font-semibold text-7xl top-20 opacity-1 cursor-text text-transparent">
                                 Sé parte. Sé el futuro.
                             </h1>
                             <motion.h2
@@ -60,13 +60,12 @@ export default function HeroSection({ className }: classNameProp) {
                                         duration: 0.8,
                                         ease: "easeInOut",
                                     }}
-                                    onClick={() => scrollTo(0, 50)}
                                 >
                                     <Link
                                         href="https://example.org"
                                         target="_blank"
                                     >
-                                        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50 hover:shadow-2xl hover:brightness-[2] transition-all">
+                                        <button className="font-inter relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50 hover:shadow-2xl hover:brightness-[2] transition-all">
                                             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#1F1F1F_0%,#3A3A3A_50%,#FFFFFF_100%)]" />
                                             <span className="px-6 text-md inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000103] py-1 font-medium text-white backdrop-blur-3xl">
                                                 <Info size={20} />
@@ -90,9 +89,9 @@ export default function HeroSection({ className }: classNameProp) {
                                         href="https://example.org"
                                         target="_blank"
                                     >
-                                        <button className="font-geist-sans text-md w-32 inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-[#1F1F1F] bg-[linear-gradient(110deg,#000103,45%,#6A6A6A,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:brightness-[1.2] hover:shadow-2xl hover:border-white hover:border-2">
-                                            <span className="px-6 text-md inline-flex h-full w-full cursor-pointer items-center justify-center">
-                                                <UserRoundPlus size={24} />
+                                        <button className="font-inter text-md inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-[#1F1F1F] bg-[linear-gradient(110deg,#000103,45%,#6A6A6A,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:brightness-[1.2] hover:shadow-2xl hover:border-white hover:border-2 w-40">
+                                            <span className="py-1 px-6 font-medium inline-flex h-full cursor-pointer items-center justify-center text-white">
+                                                <UserRoundPlus size={20} />
                                                 &nbsp;&nbsp;Registrar
                                             </span>
                                         </button>
@@ -105,6 +104,6 @@ export default function HeroSection({ className }: classNameProp) {
 
                 <div className="z-0 absolute pointer-events-none inset-0 items-center justify-center dark:bg-black dark:block hidden [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             </AuroraBackground>
-        </motion.div>
+        </motion.section>
     );
 }
