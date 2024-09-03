@@ -1,3 +1,5 @@
+// FIXMEEEE
+
 "use client";
 import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "next/link";
@@ -87,27 +89,26 @@ export const DesktopSidebar = ({
     className,
     children,
     ...props
-}: React.ComponentProps<typeof motion.div>) => {
+    //}: React.ComponentProps<typeof motion.div>) => {
+}: {
+    className?: string;
+    children?: any;
+}) => {
     const { open, setOpen, animate } = useSidebar();
     return (
         <>
-            <motion.div
+            <div
                 className={cn(
-                    "h-full px-4 py-4 hidden md:flex md:flex-col w-[300px] flex-shrink-0 transition-colors",
-                    open
-                        ? "bg-neutral-100 dark:bg-neutral-800"
-                        : "bg-transparent",
+                    "h-full px-4 py-4 hidden md:flex md:flex-col w-[300px] bg-neutral-400/10 ",
+                    "transition-transform duration-300 translate-x-[245px] hover:translate-x-[0]",
                     className
                 )}
-                animate={{
-                    width: animate ? (open ? "300px" : "60px") : "300px",
-                }}
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
                 {...props}
             >
                 {children}
-            </motion.div>
+            </div>
         </>
     );
 };
@@ -122,10 +123,10 @@ export const MobileSidebar = ({
         <>
             <div
                 className={cn(
-                    "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between w-full",
+                    "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between w-full",
                     open
                         ? "bg-neutral-100 dark:bg-neutral-800"
-                        : "bg-transparent"
+                        : "bg-neutral-50/0"
                 )}
                 {...props}
             >
@@ -142,8 +143,8 @@ export const MobileSidebar = ({
                             animate={{ x: 0, opacity: 1 }}
                             exit={{ x: "-100%", opacity: 0 }}
                             transition={{
-                                duration: 0.3,
-                                ease: "easeInOut",
+                                duration: 0.5,
+                                ease: "easeOut",
                             }}
                             className={cn(
                                 "fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
@@ -188,14 +189,9 @@ export const SidebarLink = ({
 
             <motion.span
                 animate={{
-                    display: animate
-                        ? open
-                            ? "inline-block"
-                            : "none"
-                        : "inline-block",
                     opacity: animate ? (open ? 1 : 0) : 1,
                 }}
-                className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+                className="text-neutral-700 dark:text-neutral-200 text-sm inline-block !p-0 !m-0"
             >
                 {link.label}
             </motion.span>
