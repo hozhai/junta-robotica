@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 interface Links {
-    label: string;
+    label: React.JSX.Element | React.ReactNode;
     href: string;
     icon: React.JSX.Element | React.ReactNode;
 }
@@ -99,8 +99,7 @@ export const DesktopSidebar = ({
         <>
             <div
                 className={cn(
-                    "h-full px-4 py-4 hidden md:flex md:flex-col w-[300px] bg-neutral-400/10 ",
-                    "transition-transform duration-300 translate-x-[245px] hover:translate-x-[0]",
+                    "fixed right-0 top-0 z-40 h-full px-4 py-4 hidden md:flex md:flex-col w-[200px] bg-neutral-400/10 backdrop-blur-md transition-transform duration-300 translate-x-[145px] hover:translate-x-[0] shadow-lg",
                     className
                 )}
                 onMouseEnter={() => setOpen(true)}
@@ -191,7 +190,7 @@ export const SidebarLink = ({
                 animate={{
                     opacity: animate ? (open ? 1 : 0) : 1,
                 }}
-                className="text-neutral-700 dark:text-neutral-200 text-sm inline-block !p-0 !m-0"
+                className="text-neutral-700 dark:text-neutral-200 text-sm inline-block !p-0 !m-0 hover:translate-x-1 transition-transform"
             >
                 {link.label}
             </motion.span>

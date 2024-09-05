@@ -6,7 +6,7 @@ import { AuroraBackground } from "@/components/ui/aurora";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import type { classNameProp } from "@/lib";
-import { CircleChevronRight, Info, UserRoundPlus } from "lucide-react";
+import { CircleChevronRight, Info, Mouse, UserRoundPlus } from "lucide-react";
 
 export default function HeroSection({ className }: classNameProp) {
     return (
@@ -52,7 +52,7 @@ export default function HeroSection({ className }: classNameProp) {
                                 &quot;primera junta de robótica 2025&quot;
                             </motion.h2>
                             <div className="mt-6 flex justify-between items-center">
-                                <motion.div
+                                {/* <motion.div
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{
@@ -73,8 +73,9 @@ export default function HeroSection({ className }: classNameProp) {
                                             </span>
                                         </button>
                                     </Link>
-                                </motion.div>
+                                </motion.div> 
                                 <div className="w-6 h-0"></div>
+                                */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -102,6 +103,26 @@ export default function HeroSection({ className }: classNameProp) {
                     </motion.div>
                 </HeroHighlight>
 
+                <motion.div
+                    className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white w-7 h-7 z-20"
+                    initial={{
+                        opacity: 0,
+                        y: -40,
+                    }}
+                    animate={{
+                        opacity: [0, 1, 0],
+                        y: [-40, -20, 0],
+                    }}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        repeatDelay: 0.5,
+                        duration: 1.5,
+                        ease: "linear",
+                    }}
+                >
+                    <Mouse className="w-7 h-7" />
+                </motion.div>
                 <div className="z-0 absolute pointer-events-none inset-0 items-center justify-center dark:bg-black dark:block hidden [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             </AuroraBackground>
         </motion.section>

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { NavSidebar } from "@/components/ui/nav-sidebar";
+import { NavSidebar } from "@/components/custom/nav-sidebar";
 
 const inter = Inter({
     subsets: ["latin"],
