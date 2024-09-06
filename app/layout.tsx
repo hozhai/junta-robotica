@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { NavSidebar } from "@/components/custom/nav-sidebar";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -18,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "Primera Junta de Robòtica",
     description:
-        "Pàgina oficial del primer festival de robòtica en Lo Barnechea, Chile. Bienvenidos!",
+        "Pàgina oficial de la primera junta de robòtica en Lo Barnechea, Chile. Bienvenidos!",
 };
 
 export default function RootLayout({
@@ -44,7 +43,6 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <NavSidebar />
                     {children}
                 </ThemeProvider>
             </body>
