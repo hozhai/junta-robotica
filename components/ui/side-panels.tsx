@@ -17,7 +17,7 @@ export default function SidePanels({ className }: classNameProp) {
                     className
                 )}
             >
-                <div className="shadow-[inset_-20px_0px_80px_60px_hsl(var(--background))] dark:bg-grid-white/[0.5] w-full h-full translate-z-2 rotate-y-[35deg] scale3d-[1_1_2]"></div>
+                <div className="shadow-[inset_-20px_0px_80px_90px_hsl(var(--background))] dark:bg-grid-white/[0.5] w-full h-full translate-z-2 rotate-y-[35deg] scale3d-[1_1_2]"></div>
             </motion.div>
 
             <motion.div
@@ -29,7 +29,7 @@ export default function SidePanels({ className }: classNameProp) {
                     className
                 )}
             >
-                <div className="shadow-[inset_-20px_0px_80px_60px_hsl(var(--background))] dark:bg-grid-white/[0.5] w-full h-full translate-z-2 rotate-y-[35deg] scale3d-[1_1_2]"></div>
+                <div className="shadow-[inset_-20px_0px_80px_90px_hsl(var(--background))] dark:bg-grid-white/[0.5] w-full h-full translate-z-2 rotate-y-[35deg] scale3d-[1_1_2]"></div>
             </motion.div>
         </>
     );

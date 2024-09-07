@@ -66,6 +66,7 @@ const config = {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
                 },
+                "off-black": "#020202"
             },
             borderRadius: {
                 lg: "var(--radius)",
@@ -110,7 +111,7 @@ const config = {
         addVariablesForColors,
         require("tailwindcss-animate"),
         require("tailwindcss-3d"),
-        function ({ matchUtilities, theme }: any) {
+        function({ matchUtilities, theme }: any) {
             matchUtilities(
                 {
                     "bg-grid": (value: any) => ({
@@ -135,7 +136,7 @@ const config = {
                 }
             );
         },
-        function ({ matchUtilities, theme }: any) {
+        function({ matchUtilities, theme }: any) {
             matchUtilities(
                 {
                     "bg-dot-thick": (value: any) => ({

@@ -52,7 +52,7 @@ export default function AboutSection({ className }: classNameProp) {
     ];
     return (
         <section
-            className={cn("h-[100vh] pt-36 relative", className)}
+            className={cn("h-[100vh] pt-36 relative bg-off-black", className)}
             id="about-section"
         >
             <h2 className="text-center text-6xl font-semibold relative z-20">

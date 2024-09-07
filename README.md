@@ -18,13 +18,15 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 
 ## TODO
 [] Components
-- [X] Navigation bar
-  - [] Make icon, username and logo dynamic
+- [] Navigation bar
+  - [] Modify the current navigation bar
+  - [] Sign in, etc. all links
+  - [] Update TODO for navbar
 
 [] Home page
 - [] Landing/Hero
-  - [~] Button to learn more
   - [X] Signal for the user to scroll down
+  - [] Revamp landing hero section so as for it to not feel too cramped. Vercel home page is good inspiration, same with [Cursor's](https://cursor.sh).
 - [] About (festival) (!)
 - [] Timeline (festival)
 - [] About (team)
@@ -37,12 +39,12 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 - [] fr_fr
 
 [] Accounts
+- [] Login page
 - [] Allow users (teachers/schools) to sign in and register their team
   - [] User login
   - [] School login
 - [] Setup probably MongoDB maybe I cba to do some fancy sql db
 - [] Some GUI to visualize the data for the team behind the event
-- [] 
 
 
 ### Running your own fork:
@@ -55,6 +57,8 @@ $ yarn dev
 ```
 
 then open up `http://localhost:3000/` in the browser of your choice.
+
+You will need to add your own login providers' client ID and secret, as those are not supplied for you (for obvious reasons), so take a look at [Next Auth's](https://next-auth.js.org/) documentation for more information.
 
 ---
 
