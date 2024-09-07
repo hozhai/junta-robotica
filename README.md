@@ -32,11 +32,11 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 - [] About (team)
 - [] How to participate
 
-[] Languages file
+[] Language support (see [this blog](https://locize.com/blog/next-app-dir-i18n/)) 
 - [] en_us (!)
 - [] es_cl (!)
-- [] de_de
-- [] fr_fr
+- [] de_de (?)
+- [] fr_fr (?)
 
 [] Accounts
 - [] Login page
