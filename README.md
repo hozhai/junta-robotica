@@ -47,7 +47,7 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 - [] Some GUI to visualize the data for the team behind the event
 
 
-### Running your own fork:
+## Running your own fork:
 
 If you'd like to run your own fork, please clone the repository and set up your environment like so: 
 
@@ -55,6 +55,8 @@ If you'd like to run your own fork, please clone the repository and set up your 
 $ yarn
 $ yarn dev
 ```
+
+Make sure you have [Yarn](https://yarnpkg.com/) installed on your machine before attempting to use the command.
 
 then open up `http://localhost:3000/` in the browser of your choice.
 
@@ -66,4 +68,4 @@ Feel free to open up issues or pull requests if you happen to find and fix unint
 
 ---
 
-GNU GENERAL PUBLIC LICENSE V3
+MIT License
