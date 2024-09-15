@@ -6,10 +6,12 @@ import { cn } from "@/lib/utils";
 import {
     IconBrandGithub,
     IconBrandGoogle,
+    IconExclamationMark,
     IconMail,
 } from "@tabler/icons-react";
 import { signIn } from "next-auth/react";
-import { Mail } from "lucide-react";
+import { CircleAlert, Mail } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
 export function SignupForm() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

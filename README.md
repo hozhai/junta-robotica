@@ -15,6 +15,7 @@ This website is developed as part of the FesRob project by one of the members of
 Check out the team behind the project here. (team website todo)
 
 This website was built using [NextJS](https://nextjs.org) and [Figma](https://figma.com), along with [shadcn\ui](https://ui.shadcn.com), [framer-motion](https://www.framer.com/motion/) and [Aceternity UI](https://ui.aceternity.com/).
+Also credits to [https://bg.ibelick.com/](https://bg.ibelick.com/) for the inspiration from the amazing backgrounds!
 
 ## TODO
 [] Components
@@ -25,7 +26,6 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 
 [] Home page
 - [] Landing/Hero
-  - [X] Signal for the user to scroll down
   - [] Revamp landing hero section so as for it to not feel too cramped. Vercel home page is good inspiration, same with [Cursor's](https://cursor.sh).
 - [] About (festival) (!)
 - [] Timeline (festival)
@@ -40,9 +40,9 @@ This website was built using [NextJS](https://nextjs.org) and [Figma](https://fi
 
 [] Accounts
 - [] Login page
-- [] Allow users (teachers/schools) to sign in and register their team
-  - [] User login
-  - [] School login
+  - [] Add magic link sign
+  - [] Let users be known when an invalid email is supplied
+- [] Allow users to sign in and register their team
 - [] Setup probably MongoDB maybe I cba to do some fancy sql db
 - [] Some GUI to visualize the data for the team behind the event
 
