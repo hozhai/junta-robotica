@@ -6,12 +6,9 @@ import { cn } from "@/lib/utils";
 import {
     IconBrandGithub,
     IconBrandGoogle,
-    IconExclamationMark,
     IconMail,
 } from "@tabler/icons-react";
 import { signIn } from "next-auth/react";
-import { CircleAlert, Mail } from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
 export function SignupForm() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +22,7 @@ export function SignupForm() {
                 Welcome to Hell Inc.
             </h2>
             <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                Try to login because I still don't know if this works or not. Yippie!
+                Try to login because I still don&apos;t know if this works or not. Yippie!
             </p>
 
             <form className="my-8" onSubmit={handleSubmit}>
@@ -77,7 +74,7 @@ export function SignupForm() {
             </form>
             <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
             { /* FIXME: change the words terms and conditions & privacy policy with each of their respective links!!! */}
-            <p className="text-neutral-500 text-sm">*By clicking "Send Magic Link" or any of the alternative sign in methods, you agree to our Terms and Conditions along with our Privacy Policy.</p>
+            <p className="text-neutral-500 text-sm">*By clicking &quot;Send Magic Link&quot; or any of the alternative sign in methods, you agree to our Terms and Conditions along with our Privacy Policy.</p>
             <br />
             <p className="text-neutral-500 text-sm">*What is a magic link?</p>
         </div>
