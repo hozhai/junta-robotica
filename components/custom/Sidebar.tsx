@@ -4,7 +4,6 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
     Building,
     CircleUserRound,
@@ -14,7 +13,9 @@ import {
     Send,
 } from "lucide-react";
 
-export function NavSidebar() {
+export function NavSidebar({ avatarIcon, userName }: { avatarIcon?: React.ReactNode, userName?: string | null | undefined }) {
+    userName ??= ""
+
     const links = [
         {
             label: "Account",
@@ -39,7 +40,7 @@ export function NavSidebar() {
         },
         {
             label: <span className="text-red-400">Logout</span>,
-            href: "#",
+            href: "/login/signout",
             icon: (
                 <LogOut className="text-red-400 dark:text-red-400 h-5 w-5 flex-shrink-0" />
             ),
@@ -74,27 +75,9 @@ export function NavSidebar() {
                     {/* todo: remove dummy image & use actual real account names */}
                     <SidebarLink
                         link={{
-                            label: "John Doe",
+                            label: userName,
                             href: "#",
-                            icon: (
-                                <Avatar className="-ml-1 w-7 h-7 flex-shrink-0">
-                                    <AvatarImage
-                                        src="https://avatars.githubusercontent.com/u/57015971?v=4"
-                                        width={28}
-                                        height={28}
-                                    />
-                                    <AvatarFallback>JD</AvatarFallback>
-                                </Avatar>
-                            ),
-                        }}
-                    />
-                    <SidebarLink
-                        link={{
-                            label: "Sign up | Sign in",
-                            href: "#",
-                            icon: (
-                                <KeyRound className="h-5 w-5 flex-shrink-0" />
-                            ),
+                            icon: avatarIcon
                         }}
                     />
                 </div>

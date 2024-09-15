@@ -30,11 +30,9 @@ export default function RootLayout({
             lang="en-us"
             suppressHydrationWarning
             className={cn(
-                "snap-y snap-proximity overflow-x-hidden min-h-screen max-h-screen min-w-full max-w-full",
                 GeistSans.variable,
                 inter.variable
             )}
-            style={{ msScrollSnapPointsY: "100vh" }}
         >
             <body>
                 <ThemeProvider

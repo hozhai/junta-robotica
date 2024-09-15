@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// FIXME: only allow correct image sources in prod
 const nextConfig = {
     reactStrictMode: true,
     transpilePackages: ["geist"],
@@ -10,6 +11,13 @@ const nextConfig = {
                 port: "",
                 pathname: "/**",
             },
+            {
+                protocol: "https",
+                hostname: "assets.aceternity.com",
+                port: "",
+                pathname: "/**",
+            },
+
         ],
     },
 };

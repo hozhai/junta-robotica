@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,6 +21,7 @@ export const MenuItem = ({
     children,
     className,
     childClassName,
+    willHaveChild = true,
 }: {
     setActive: (item: string) => void;
     active: string | null;
@@ -29,13 +30,14 @@ export const MenuItem = ({
     children?: React.ReactNode;
     className?: string;
     childClassName?: string;
+    willHaveChild?: boolean;
 }) => {
     return (
         <div
             onMouseEnter={() => setActive(item)}
             className={cn("relative", className)}
         >
-            <motion.p
+            <motion.button
                 transition={{ duration: 0.3 }}
                 className={cn(
                     "cursor-pointer text-black hover:opacity-[0.9] dark:text-white h-12 w-fit flex items-center ",
@@ -43,8 +45,8 @@ export const MenuItem = ({
                 )}
             >
                 {itemNode || item}
-            </motion.p>
-            {active !== null && (
+            </motion.button>
+            {active !== null && willHaveChild && (
                 <motion.div
                     initial={{ opacity: 0, scale: 0.85, y: 10 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
