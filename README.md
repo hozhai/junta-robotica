@@ -25,8 +25,7 @@ Also credits to [https://bg.ibelick.com/](https://bg.ibelick.com/) for the inspi
   - [] Update TODO for navbar
 
 [] Home page
-- [] Landing/Hero
-  - [] Revamp landing hero section so as for it to not feel too cramped. Vercel home page is good inspiration, same with [Cursor's](https://cursor.sh).
+- [X] Landing/Hero
 - [] About (festival) (!)
 - [] Timeline (festival)
 - [] About (team)

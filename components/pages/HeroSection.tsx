@@ -50,11 +50,11 @@ export default function HeroSection({ className }: classNameProp) {
                                 <Link
                                     href="https://example.org"
                                     target="_blank"
-                                    className="font-inter text-md inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-[#1F1F1F] bg-[linear-gradient(110deg,#000103,45%,#6A6A6A,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:brightness-[1.2] hover:shadow-2xl hover:border-white hover:border-2 w-40"
+                                    className="font-inter text-md inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-[#1F1F1F] bg-[linear-gradient(110deg,#000103,45%,#6A6A6A,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:brightness-[1.2] hover:shadow-2xl hover:border-white hover:border-2 w-fit"
                                 >
                                     <span className="py-1 px-6 font-medium inline-flex h-full cursor-pointer items-center justify-center text-white">
                                         <UserRoundPlus size={20} />
-                                        &nbsp;&nbsp;Registrar
+                                        &nbsp;&nbsp;¿Como participo?
                                     </span>
                                 </Link>
                             </motion.div>

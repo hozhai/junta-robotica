@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import TransitionLink from "./TransitionLink";
 
 export function Navbar({ avatarImage, userName }: { avatarImage?: React.ReactNode, userName?: string | null | undefined }) {
     const [active, setActive] = useState<string | null>(null);
@@ -26,12 +27,12 @@ export function Navbar({ avatarImage, userName }: { avatarImage?: React.ReactNod
         };
     }, []);
     return (
-        <div className={cn("fixed font-geist-sans inset-x-0 max-w-2xl z-50")}>
+        <div className="fixed font-geist-sans inset-x-0 max-w-2xl z-50">
             <Menu
                 setActive={setActive}
                 className={cn(
                     "flex h-20 transition-colors",
-                    navBg ? "bg-white/[0.2] dark:bg-black" : "bg-transparent"
+                    navBg ? "bg-white/[0.2] dark:bg-black" : "bg-white/[0.2] dark:bg-black/[0.3]"
                 )}
             >
                 <MenuItem
@@ -87,10 +88,10 @@ export function Navbar({ avatarImage, userName }: { avatarImage?: React.ReactNod
 
                 {
                     !userName ?
-                        <Link
+                        <TransitionLink
                             href="/login"
                             className="ml-20"
-                        >Sign In</Link>
+                        >Sign In</TransitionLink>
                         :
                         <MenuItem
                             setActive={setActive}

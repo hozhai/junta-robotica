@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import TransitionLink from "../custom/TransitionLink";
 
 const transition = {
     type: "spring",
@@ -133,11 +134,11 @@ export const ProductItem = ({
 
 export const HoveredLink = ({ children, ...rest }: any) => {
     return (
-        <Link
+        <TransitionLink
             {...rest}
             className="text-neutral-700 dark:text-neutral-200 hover:text-black "
         >
             {children}
-        </Link>
+        </TransitionLink>
     );
 };

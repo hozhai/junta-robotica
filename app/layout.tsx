@@ -31,7 +31,9 @@ export default function RootLayout({
             suppressHydrationWarning
             className={cn(
                 GeistSans.variable,
-                inter.variable
+                inter.variable,
+                "snap-y snap-proximity motion-safe:scroll-smooth overflow-x-hidden min-h-screen max-h-screen min-w-full max-w-full"
+
             )}
         >
             <body>
@@ -39,7 +41,6 @@ export default function RootLayout({
                     attribute="class"
                     defaultTheme="dark"
                     enableSystem
-                    disableTransitionOnChange
                 >
                     {children}
                 </ThemeProvider>
